@@ -1,0 +1,5 @@
+python-dotenv==1.0.0
+psycopg2-binary
+uvicorn==0.24.0.post1
+fastapi==0.104.1
+asyncpg==0.29.0

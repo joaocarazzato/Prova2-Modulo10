@@ -1,0 +1,23 @@
+version: '2.0'
+services:
+  blog:
+    container_name: blog
+    restart: on-failure
+    # image: blog
+    build:
+      context: ./blog
+      dockerfile: blog.dockerfile
+    ports:
+      - 5000:5000 
+    dns:
+        - 8.8.8.8
+    volumes:
+      - ./logs-volume:/python-docker/logs
+
+  gateway:
+    build: 
+      dockerfile: ./nginx/nginx.dockerfile
+    ports:
+      - "8000:80"
+    depends_on:
+      - blog

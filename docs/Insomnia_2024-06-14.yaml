@@ -1,0 +1,177 @@
+_type: export
+__export_format: 4
+__export_date: 2024-06-14T13:42:12.206Z
+__export_source: insomnia.desktop.app:v8.6.1
+resources:
+  - _id: req_0cf7936c56bc4560ab0dc09e8d4663bc
+    parentId: wrk_a89f4003e0f4437b9bd586504a0ddca3
+    modified: 1718367954976
+    created: 1718367803218
+    url: "{{ _.baseUrl }}/blog"
+    name: Blog GET
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1718367803218
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_a89f4003e0f4437b9bd586504a0ddca3
+    parentId: null
+    modified: 1718367800029
+    created: 1718367800029
+    name: Prova 2 API
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_256793617dff4c419005155b2cc9f411
+    parentId: wrk_a89f4003e0f4437b9bd586504a0ddca3
+    modified: 1718370418211
+    created: 1718367946266
+    url: "{{ _.baseUrl }}/blog"
+    name: Blog POST
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"blog_id": 1,
+        	"blog_title": "test",
+        	"blog_content": "teste"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1718097810140.375
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_94c2cbc22bbd45a08dbe8b90428b6942
+    parentId: wrk_a89f4003e0f4437b9bd586504a0ddca3
+    modified: 1718368166854
+    created: 1718367974005
+    url: "{{ _.baseUrl }}/blog/:id"
+    name: Blog GET By ID
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1717827817062.75
+    isPrivate: false
+    pathParameters:
+      - name: id
+        value: "1"
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_09b97d2cb85e4765b0a798f1598c794a
+    parentId: wrk_a89f4003e0f4437b9bd586504a0ddca3
+    modified: 1718370915908
+    created: 1718368020334
+    url: "{{ _.baseUrl }}/blog/:id"
+    name: Blog EDIT By ID
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"blog_title": "teste uhul",
+        	"blog_content": "teste uhu"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1717422827446.3125
+    isPrivate: false
+    pathParameters:
+      - name: id
+        value: "1"
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_df86aa2211364b27a4be7f3a1c050096
+    parentId: wrk_a89f4003e0f4437b9bd586504a0ddca3
+    modified: 1718368223488
+    created: 1718368001298
+    url: "{{ _.baseUrl }}/blog/:id"
+    name: Blog DELETE By ID
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1717355329176.9062
+    isPrivate: false
+    pathParameters:
+      - name: id
+        value: "1"
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_aaceaab6a71bf9c38cd6602c03cff6948f18379b
+    parentId: wrk_a89f4003e0f4437b9bd586504a0ddca3
+    modified: 1718372281674
+    created: 1718367800031
+    name: Base Environment
+    data:
+      baseUrl: http://localhost:8000/blog
+    dataPropertyOrder:
+      "&":
+        - baseUrl
+    color: null
+    isPrivate: false
+    metaSortKey: 1718367800031
+    _type: environment
+  - _id: jar_aaceaab6a71bf9c38cd6602c03cff6948f18379b
+    parentId: wrk_a89f4003e0f4437b9bd586504a0ddca3
+    modified: 1718367800032
+    created: 1718367800032
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
